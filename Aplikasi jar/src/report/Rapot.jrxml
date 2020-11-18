@@ -1,0 +1,1935 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Rapot" language="groovy" pageWidth="609" pageHeight="935" whenNoDataType="AllSectionsNoDetail" columnWidth="525" leftMargin="42" rightMargin="42" topMargin="14" bottomMargin="14" uuid="aa0efaa5-90d2-4643-bfbb-5683fe7f9f0a">
+	<property name="ireport.zoom" value="1.1000000000000008"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="idsiswapr" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="pta" class="java.lang.String"/>
+	<parameter name="penjas" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="kkpi" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="fsk" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="kwu" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="mtk" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="bsun" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="bind" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ips" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="bing" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="pkn" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="pai" class="java.lang.String"/>
+	<parameter name="ipa" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="bio" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="plh" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="kma" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="pspj" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     tb_rapot.`id_rapot` AS tb_rapot_id_rapot,
+     tb_rapot.`id_siswa` AS tb_rapot_id_siswa,
+     tb_rapot.`nm_siswa` AS tb_rapot_nm_siswa,
+     tb_rapot.`kompetensi` AS tb_rapot_kompetensi,
+     tb_rapot.`kelas` AS tb_rapot_kelas,
+     tb_rapot.`semester` AS tb_rapot_semester,
+     tb_rapot.`ta` AS tb_rapot_ta,
+     tb_rapot.`pai` AS tb_rapot_pai,
+     tb_rapot.`pkn` AS tb_rapot_pkn,
+     tb_rapot.`bind` AS tb_rapot_bind,
+     tb_rapot.`penjas` AS tb_rapot_penjas,
+     tb_rapot.`bing` AS tb_rapot_bing,
+     tb_rapot.`mtk` AS tb_rapot_mtk,
+     tb_rapot.`ipa` AS tb_rapot_ipa,
+     tb_rapot.`ips` AS tb_rapot_ips,
+     tb_rapot.`kkpi` AS tb_rapot_kkpi,
+     tb_rapot.`kwu` AS tb_rapot_kwu,
+     tb_rapot.`fisika` AS tb_rapot_fisika,
+     tb_rapot.`kimia` AS tb_rapot_kimia,
+     tb_rapot.`biologi` AS tb_rapot_biologi,
+     tb_rapot.`pteori` AS tb_rapot_pteori,
+     tb_rapot.`ppraktik` AS tb_rapot_ppraktik,
+     tb_rapot.`pprakerin` AS tb_rapot_pprakerin,
+     tb_rapot.`bsu` AS tb_rapot_bsu,
+     tb_rapot.`plh` AS tb_rapot_plh,
+     tb_rapot.`pspj` AS tb_rapot_pspj,
+     tb_rapot.`pramuka` AS tb_rapot_pramuka,
+     tb_rapot.`osis` AS tb_rapot_osis,
+     tb_rapot.`pmr` AS tb_rapot_pmr,
+     tb_rapot.`kerajinan` AS tb_rapot_kerajinan,
+     tb_rapot.`kerapian` AS tb_rapot_kerapian,
+     tb_rapot.`kelakuan` AS tb_rapot_kelakuan,
+     tb_rapot.`sakit` AS tb_rapot_sakit,
+     tb_rapot.`izin` AS tb_rapot_izin,
+     tb_rapot.`alpha` AS tb_rapot_alpha,
+     tb_rapot.`rata` AS tb_rapot_rata,
+     tb_rapot.`ket` AS tb_rapot_ket,
+     tb_rapot.`catatan` AS tb_rapot_catatan
+FROM
+     `tb_rapot` tb_rapot 
+WHERE 
+tb_rapot.`id_siswa` = $P{idsiswapr} AND tb_rapot.`ta` = $P{pta}]]>
+	</queryString>
+	<field name="tb_rapot_id_rapot" class="java.lang.String"/>
+	<field name="tb_rapot_id_siswa" class="java.lang.String"/>
+	<field name="tb_rapot_nm_siswa" class="java.lang.String"/>
+	<field name="tb_rapot_kompetensi" class="java.lang.String"/>
+	<field name="tb_rapot_kelas" class="java.lang.String"/>
+	<field name="tb_rapot_semester" class="java.lang.String"/>
+	<field name="tb_rapot_ta" class="java.lang.String"/>
+	<field name="tb_rapot_pai" class="java.lang.String"/>
+	<field name="tb_rapot_pkn" class="java.lang.String"/>
+	<field name="tb_rapot_bind" class="java.lang.String"/>
+	<field name="tb_rapot_penjas" class="java.lang.String"/>
+	<field name="tb_rapot_bing" class="java.lang.String"/>
+	<field name="tb_rapot_mtk" class="java.lang.String"/>
+	<field name="tb_rapot_ipa" class="java.lang.String"/>
+	<field name="tb_rapot_ips" class="java.lang.String"/>
+	<field name="tb_rapot_kkpi" class="java.lang.String"/>
+	<field name="tb_rapot_kwu" class="java.lang.String"/>
+	<field name="tb_rapot_fisika" class="java.lang.String"/>
+	<field name="tb_rapot_kimia" class="java.lang.String"/>
+	<field name="tb_rapot_biologi" class="java.lang.String"/>
+	<field name="tb_rapot_pteori" class="java.lang.String"/>
+	<field name="tb_rapot_ppraktik" class="java.lang.String"/>
+	<field name="tb_rapot_pprakerin" class="java.lang.String"/>
+	<field name="tb_rapot_bsu" class="java.lang.String"/>
+	<field name="tb_rapot_plh" class="java.lang.String"/>
+	<field name="tb_rapot_pspj" class="java.lang.String"/>
+	<field name="tb_rapot_pramuka" class="java.lang.String"/>
+	<field name="tb_rapot_osis" class="java.lang.String"/>
+	<field name="tb_rapot_pmr" class="java.lang.String"/>
+	<field name="tb_rapot_kerajinan" class="java.lang.String"/>
+	<field name="tb_rapot_kerapian" class="java.lang.String"/>
+	<field name="tb_rapot_kelakuan" class="java.lang.String"/>
+	<field name="tb_rapot_sakit" class="java.lang.String"/>
+	<field name="tb_rapot_izin" class="java.lang.String"/>
+	<field name="tb_rapot_alpha" class="java.lang.String"/>
+	<field name="tb_rapot_rata" class="java.lang.String"/>
+	<field name="tb_rapot_ket" class="java.lang.String"/>
+	<field name="tb_rapot_catatan" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<image>
+				<reportElement uuid="91a329fb-823e-4d40-a407-836bb5c96240" x="-40" y="-7" width="607" height="141"/>
+				<imageExpression><![CDATA["D:\\KULIAH\\SKRIPSI\\Program\\SistemInformasiPengolahanNilaiRaport2\\src\\img\\kop smk im_1.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="3ec0bdd5-3ca0-4572-9a36-dc910c94981f" x="167" y="0" width="225" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN HASIL BELAJAR SISWA]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="645" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="3" y="420" width="26" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="263" y="460" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[80]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="3" y="580" width="26" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="311" y="260" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_ipa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="29" y="460" width="234" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Prakerin]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="311" y="440" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_ppraktik}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="359" y="480" width="165" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Catatan]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="263" y="160" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{bind}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="359" y="440" width="165" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Keterangan]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="263" y="120" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{pai}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="29" y="340" width="234" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Fisika ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="c2745e11-39f6-48b0-8e43-101d14c46f6b" x="359" y="75" width="165" height="265"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="311" y="360" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_kimia}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="292" y="600" width="157" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Kelakuan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="29" y="220" width="234" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Bahasa Inggirs]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="449" y="580" width="75" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_kerajinan}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="359" y="460" width="165" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tb_rapot_ket}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="b7b18199-8bbc-4144-be74-be520d9dbe25" x="263" y="75" width="48" height="25"/>
+				<box leftPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[KKM]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="263" y="520" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{plh}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement uuid="73726cfd-4025-435a-9213-2c618bc64dde" x="88" y="3" width="139" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_nm_siswa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="3" y="620" width="26" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="263" y="220" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{bing}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="3" y="380" width="26" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[9.]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="263" y="280" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{ips}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="29" y="320" width="234" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Kewirausahaan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="3" y="460" width="26" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="29" y="600" width="162" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Osis]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="311" y="160" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_bind}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="263" y="260" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{ipa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="3" y="440" width="26" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="263" y="380" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{bio}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="311" y="460" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_pprakerin}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="3" y="100" width="26" height="20"/>
+				<box leftPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[A.]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="476" y="400" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_alpha}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="3" y="160" width="26" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="29" y="240" width="234" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Matematika]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b7b18199-8bbc-4144-be74-be520d9dbe25" x="311" y="75" width="48" height="25"/>
+				<box leftPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ANGKA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="29" y="120" width="234" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Pendidikan Agama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="359" y="340" width="26" height="20"/>
+				<box leftPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[F.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="29" y="100" width="330" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[I. NORMATIF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="385" y="340" width="139" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[VI. ABSEN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="3" y="400" width="26" height="20"/>
+				<box leftPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[C.]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="795c5c19-98c9-48ef-8927-8492d6220193" x="88" y="43" width="159" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_kompetensi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="29" y="440" width="234" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Praktik]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="263" y="500" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{bsun}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="385" y="380" width="91" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Izin]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="311" y="320" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_kwu}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="3" y="220" width="26" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="29" y="260" width="234" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Ilmu Pengetahuan Alam]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="311" y="340" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_fisika}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="cb68f8fd-03be-44f5-a8d3-bffbe3d071b0" x="351" y="3" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_kelas}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="311" y="300" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_kkpi}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="311" y="520" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_plh}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="3" y="240" width="26" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="3" y="260" width="26" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="292" y="580" width="157" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Kerajinan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="385" y="400" width="91" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Alpha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b7b18199-8bbc-4144-be74-be520d9dbe25" x="3" y="75" width="26" height="25"/>
+				<box leftPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="263" y="180" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{pkn}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="311" y="220" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_bing}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="29" y="420" width="234" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Teori]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a05e07d1-f199-4049-8ea8-81faa1fdcc19" x="3" y="3" width="85" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Nama		:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a05e07d1-f199-4049-8ea8-81faa1fdcc19" x="263" y="3" width="88" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Kelas 		:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="476" y="420" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tb_rapot_rata}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="263" y="360" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{kma}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="311" y="500" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_bsu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="aec5270a-f340-4dea-9b10-ff256cee3087" x="351" y="23" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_semester}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="263" y="320" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{kwu}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="311" y="120" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_pai}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="263" y="540" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{pspj}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="3" y="540" width="26" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="311" y="140" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_pkn}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="263" y="240" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{mtk}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="a05e07d1-f199-4049-8ea8-81faa1fdcc19" x="3" y="43" width="85" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Kompetensi	:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="263" y="340" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{fsk}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="311" y="380" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_biologi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="29" y="540" width="234" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[PSPJ]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="476" y="360" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_sakit}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="3" y="120" width="26" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="359" y="380" width="26" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="3" y="180" width="26" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[4.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="359" y="400" width="26" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="3" y="280" width="26" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[4.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="3" y="600" width="26" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="3" y="340" width="26" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[7.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="3" y="500" width="26" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="311" y="540" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_pspj}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="359" y="420" width="117" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nilai Rata-Rata]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a05e07d1-f199-4049-8ea8-81faa1fdcc19" x="263" y="23" width="88" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Semester	:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="3" y="320" width="26" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[6.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="29" y="580" width="162" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Pramuka]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="29" y="160" width="234" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Bahasa Indonesia]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="263" y="440" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[80]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="3" y="560" width="26" height="20"/>
+				<box leftPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[E.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="266" y="580" width="26" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="292" y="620" width="157" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Kerapian]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="29" y="620" width="162" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[PMR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b7b18199-8bbc-4144-be74-be520d9dbe25" x="29" y="75" width="234" height="25"/>
+				<box leftPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[MATA PELAJARAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="29" y="300" width="234" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[KKPI]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="359" y="500" width="165" height="60"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_catatan}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="263" y="140" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{pkn}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="449" y="600" width="75" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_kelakuan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="266" y="620" width="26" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="359" y="360" width="26" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a05e07d1-f199-4049-8ea8-81faa1fdcc19" x="3" y="23" width="85" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[id Siswa		:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="3" y="480" width="26" height="20"/>
+				<box leftPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[D.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="3" y="360" width="26" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[8.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="29" y="380" width="234" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Biologi]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="263" y="300" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{kkpi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="29" y="400" width="330" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[III. PRODUKTIF]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="311" y="180" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_penjas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6bd39d0e-282f-4a52-9fb5-46b1dfec4ceb" x="88" y="23" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_id_siswa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="3" y="300" width="26" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[5.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="29" y="480" width="330" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[IV. MULOK]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="476" y="380" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_izin}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="311" y="240" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_mtk}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="191" y="620" width="75" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_pmr}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="263" y="420" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[80]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="266" y="600" width="26" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="29" y="180" width="234" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Pendidikan Jasmani, Olahraga, Kesehatan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="29" y="500" width="234" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Bahasa Sunda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="29" y="200" width="330" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[II. ADAPTIF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="29" y="280" width="234" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Ilmu Pengetahuan Sosial]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a05e07d1-f199-4049-8ea8-81faa1fdcc19" x="263" y="43" width="88" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Tahun Ajaran	:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="29" y="360" width="234" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Kimia]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="302e67f9-afae-4494-b6ff-e2bb32cc37b4" x="351" y="43" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_ta}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="29" y="560" width="495" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[V. PENGEMBANGAN DAN KEPRIBADIAN]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="191" y="580" width="75" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_pramuka}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="29" y="520" width="234" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[PLH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="3" y="140" width="26" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="449" y="620" width="75" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_kelakuan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="29" y="140" width="234" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Pendidikan Kewarganegaraan]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="311" y="420" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_pteori}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="3" y="200" width="26" height="20"/>
+				<box leftPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[B.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="3" y="520" width="26" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="922dca7f-607e-4579-ae99-ac5893ccddba" x="385" y="360" width="91" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Sakit]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="311" y="280" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_ips}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f523e3dc-6e42-420d-8e65-002d806b4996" x="191" y="600" width="75" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_rapot_osis}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<summary>
+		<band height="81" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="8ac6d387-de0b-41e5-8a7b-a57812058b25" x="377" y="3" width="100" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Mengetahui]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8ac6d387-de0b-41e5-8a7b-a57812058b25" x="377" y="18" width="100" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Kepala Sekolah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e55c4f04-0a4c-40f0-b001-aa031c586296" x="3" y="3" width="29" height="15"/>
+				<textElement verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Bekasi,]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="43a63f25-83de-440b-9019-9bd80cc5fd72" x="44" y="76" width="100" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="bedec95f-280f-43ea-883a-54c01626466d" x="32" y="3" width="124" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="e55c4f04-0a4c-40f0-b001-aa031c586296" x="42" y="25" width="100" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Orangtua / Wali]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8ac6d387-de0b-41e5-8a7b-a57812058b25" x="377" y="66" width="100" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[B. Rahmad Sartono, S.Pd]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

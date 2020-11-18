@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="483" leftMargin="56" rightMargin="56" topMargin="42" bottomMargin="42" uuid="af7abf96-59f9-4084-be4e-8e235457f523">
+	<property name="ireport.zoom" value="1.2100000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="123"/>
+	<parameter name="Logo" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     tb_kelas.`id_kelas` AS tb_kelas_id_kelas,
+     tb_kelas.`kelas` AS tb_kelas_kelas,
+     tb_kelas.`id_guru` AS tb_kelas_id_guru,
+     tb_kelas.`nm_guru` AS tb_kelas_nm_guru
+FROM
+     `tb_kelas` tb_kelas]]>
+	</queryString>
+	<field name="tb_kelas_id_kelas" class="java.lang.String"/>
+	<field name="tb_kelas_kelas" class="java.lang.String"/>
+	<field name="tb_kelas_id_guru" class="java.lang.String"/>
+	<field name="tb_kelas_nm_guru" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="140" splitType="Stretch">
+			<image>
+				<reportElement uuid="3a449cd5-c493-439b-8d16-66755bd10f11" x="-54" y="0" width="592" height="137"/>
+				<imageExpression><![CDATA[$P{Logo}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="1c80b4b9-6a96-430e-a188-73951eeb81bc" x="188" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATA KELAS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="6c892d0a-2fbd-452f-8a57-6039842cda5e" x="82" y="0" width="73" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="fb77143e-9328-4408-82b1-e4f57424644a" x="155" y="0" width="62" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="89982f11-4206-4a85-b24f-72dab9bda5a2" x="217" y="0" width="81" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="f269b6df-14be-48dd-92bc-5e24e2f07969" x="298" y="0" width="124" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="4a157b1a-b556-4f03-a714-7f8106538fb9" x="88" y="0" width="61" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[id Kelas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6cfcc702-47c5-4b83-898c-38bf400dd482" x="162" y="0" width="48" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kelas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b75068d0-608e-4069-883f-9749aa37b6b3" x="221" y="0" width="72" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[id Guru]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="16c36b2e-ce89-46ad-b87f-cf3ca8859908" x="303" y="0" width="112" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Wali Kelas]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="cb72de5d-bcb3-4cd8-96c4-82f76cb37ba4" x="82" y="0" width="73" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="24852b1a-0169-4410-a01c-746e721a6e65" x="155" y="0" width="62" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="fb8ab3fc-79b7-4c75-9525-3bff7a641a0e" x="217" y="0" width="81" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="5def0f30-563d-4290-b9ef-96b41aeb96e4" x="298" y="0" width="124" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="e9d56dc1-9a66-43a6-9150-87f45dfd870b" x="88" y="0" width="61" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_kelas_id_kelas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d87c9da1-0f93-498b-9ca8-f37b3dc2a3d9" x="161" y="0" width="48" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_kelas_kelas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="bedcd4b9-776a-4ecb-81d6-bd7cc8a0453b" x="221" y="0" width="72" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_kelas_id_guru}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="16937780-ffaa-4500-b7bb-c985e7bebae5" x="304" y="0" width="112" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_kelas_nm_guru}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement uuid="f8e00804-6e51-4e53-9a5f-125305b3c9c0" x="455" y="13" width="28" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="124" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="1b5b052e-573f-43c9-95c7-e9ee4a28c75d" x="346" y="25" width="36" height="20"/>
+				<textElement/>
+				<text><![CDATA[Bekasi,]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="91288632-3e07-4216-9a26-795eb1f123ae" x="382" y="25" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="5ed53e9f-8706-4592-8a72-442dd21c4903" x="346" y="59" width="100" height="14"/>
+				<textElement/>
+				<text><![CDATA[Kepala Sekolah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5ed53e9f-8706-4592-8a72-442dd21c4903" x="346" y="105" width="124" height="14"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[B. Rahmad Sartono, S.Pd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5ed53e9f-8706-4592-8a72-442dd21c4903" x="346" y="45" width="100" height="14"/>
+				<textElement/>
+				<text><![CDATA[Mengetahui]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

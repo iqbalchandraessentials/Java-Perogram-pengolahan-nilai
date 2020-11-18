@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="483" leftMargin="56" rightMargin="56" topMargin="42" bottomMargin="42" uuid="7b27008f-a037-4df6-87f8-e8f3dac74d6d">
+	<property name="ireport.zoom" value="1.2100000000000024"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     tb_mapel.`id_mapel` AS tb_mapel_id_mapel,
+     tb_mapel.`nm_mapel` AS tb_mapel_nm_mapel,
+     tb_mapel.`kkm` AS tb_mapel_kkm,
+     tb_mapel.`id_guru` AS tb_mapel_id_guru,
+     tb_mapel.`nm_guru` AS tb_mapel_nm_guru
+FROM
+     `tb_mapel` tb_mapel]]>
+	</queryString>
+	<field name="tb_mapel_id_mapel" class="java.lang.String"/>
+	<field name="tb_mapel_nm_mapel" class="java.lang.String"/>
+	<field name="tb_mapel_kkm" class="java.lang.Integer"/>
+	<field name="tb_mapel_id_guru" class="java.lang.String"/>
+	<field name="tb_mapel_nm_guru" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="139" splitType="Stretch">
+			<image>
+				<reportElement uuid="81cd3404-8f78-41a1-8f3e-5415c802d708" x="-55" y="0" width="593" height="136"/>
+				<imageExpression><![CDATA["D:\\KULIAH\\SKRIPSI\\Program\\SistemInformasiPengolahanNilaiRaport2\\src\\img\\kop smk im_1.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="43f2f1b1-2e59-447e-8524-4cb6c347f657" x="146" y="0" width="189" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATA MATA PELAJARAN]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="647d9a25-93f8-4903-a6f1-0e0e2c68775e" x="21" y="0" width="67" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[id Mapel]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f9b81548-a111-49c1-b14b-7e8984689896" x="88" y="0" width="133" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Mapel]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="77480fe3-f60c-430f-bb66-c190db207eaf" x="221" y="0" width="33" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[KKM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="69972e00-611d-4132-888f-b85ca0d9c4ef" x="254" y="0" width="67" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[id Guru]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bad04324-c7c4-4339-8754-5c39b603f841" x="321" y="0" width="135" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Guru]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="19" splitType="Stretch">
+			<textField>
+				<reportElement uuid="f05dafec-98ce-43ee-86e7-a8233240b2f0" x="21" y="0" width="67" height="19"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_mapel_id_mapel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="feaa3870-b257-4088-b6e7-aefccc823dbe" x="88" y="0" width="133" height="19"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_mapel_nm_mapel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d46dfd77-0b23-4616-802b-91e344d00767" x="221" y="0" width="33" height="19"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_mapel_kkm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="79689ba0-ea54-4e77-9166-af0f3a60410f" x="254" y="0" width="67" height="19"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_mapel_id_guru}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e2b8597c-429f-4f4a-9379-ca3324ffd0ca" x="321" y="0" width="135" height="19"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_mapel_nm_guru}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement uuid="2d82d29e-6788-497e-9a81-b61ede9fabd8" x="458" y="14" width="25" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="110" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="5ed53e9f-8706-4592-8a72-442dd21c4903" x="345" y="95" width="124" height="14"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[B. Rahmad Sartono, S.Pd]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="91288632-3e07-4216-9a26-795eb1f123ae" x="381" y="15" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="1b5b052e-573f-43c9-95c7-e9ee4a28c75d" x="345" y="15" width="36" height="20"/>
+				<textElement/>
+				<text><![CDATA[Bekasi,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5ed53e9f-8706-4592-8a72-442dd21c4903" x="345" y="49" width="100" height="14"/>
+				<textElement/>
+				<text><![CDATA[Kepala Sekolah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5ed53e9f-8706-4592-8a72-442dd21c4903" x="345" y="35" width="100" height="14"/>
+				<textElement/>
+				<text><![CDATA[Mengetahui]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rekap rapot" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="511" leftMargin="42" rightMargin="42" topMargin="28" bottomMargin="42" uuid="2533edad-c7a8-4ed5-8af6-5f405929a7c2">
+	<property name="ireport.zoom" value="1.2100000000000024"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="74"/>
+	<parameter name="pkelas" class="java.lang.String"/>
+	<parameter name="pta" class="java.lang.String"/>
+	<parameter name="Logo" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     tb_rapot.`id_rapot` AS tb_rapot_id_rapot,
+     tb_rapot.`id_siswa` AS tb_rapot_id_siswa,
+     tb_rapot.`nm_siswa` AS tb_rapot_nm_siswa,
+     tb_rapot.`kompetensi` AS tb_rapot_kompetensi,
+     tb_rapot.`kelas` AS tb_rapot_kelas,
+     tb_rapot.`semester` AS tb_rapot_semester,
+     tb_rapot.`ta` AS tb_rapot_ta,
+     tb_rapot.`rata` AS tb_rapot_rata,
+     tb_rapot.`ket` AS tb_rapot_ket
+FROM
+     `tb_rapot` tb_rapot
+WHERE
+     tb_rapot.`kelas` = $P{pkelas}
+ AND tb_rapot.`ta` = $P{pta}]]>
+	</queryString>
+	<field name="tb_rapot_id_rapot" class="java.lang.String"/>
+	<field name="tb_rapot_id_siswa" class="java.lang.String"/>
+	<field name="tb_rapot_nm_siswa" class="java.lang.String"/>
+	<field name="tb_rapot_kompetensi" class="java.lang.String"/>
+	<field name="tb_rapot_kelas" class="java.lang.String"/>
+	<field name="tb_rapot_semester" class="java.lang.String"/>
+	<field name="tb_rapot_ta" class="java.lang.String"/>
+	<field name="tb_rapot_rata" class="java.lang.String"/>
+	<field name="tb_rapot_ket" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="141" splitType="Stretch">
+			<image>
+				<reportElement uuid="8d7da352-5024-4816-8d8b-7ebc8c67e26f" x="-40" y="0" width="590" height="141"/>
+				<imageExpression><![CDATA[$P{Logo}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="c5ae0d6c-d976-45ee-8dbb-6c1645b0c818" x="179" y="0" width="147" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rekap Nilai Raport Siswa]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="76" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="00af4c38-2423-4fed-bb28-4689ce35ba99" x="0" y="2" width="87" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Kelas		:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="00af4c38-2423-4fed-bb28-4689ce35ba99" x="0" y="22" width="87" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Tahun Ajaran	:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="e7119a4d-fcfa-4e63-b608-5b18a33bb1cc" x="87" y="2" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tb_rapot_kelas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e7119a4d-fcfa-4e63-b608-5b18a33bb1cc" x="87" y="22" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tb_rapot_ta}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="c37e694b-b617-43ed-a808-06df1c2e691d" x="0" y="56" width="56" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[id Siswa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9ce54984-b06a-46f1-9357-78bc96687b1f" x="56" y="56" width="100" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="58bd1068-dc0c-4877-8c5e-cbedbcf2a1d2" x="156" y="56" width="100" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kompetensi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b233d499-4721-4bf1-a14b-98c15a53e06a" x="256" y="56" width="43" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kelas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ae9d6e5b-5952-4ee8-bf16-5e1f61d7ceed" x="299" y="56" width="50" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Semester]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6b69e7cc-085e-4374-bf19-a837970b53d2" x="349" y="56" width="52" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9cf74cd8-6df3-4fb3-9cd8-aa8b746d5fac" x="401" y="56" width="35" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rata2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="08ce8059-873d-4448-b578-631a3baa6c61" x="436" y="56" width="75" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ket]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="5db0f891-5db1-4b2b-874c-948c0ec79323" x="0" y="0" width="56" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tb_rapot_id_siswa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="bfb61972-f9fd-4fed-bd5d-5d10c2295e68" x="56" y="0" width="100" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tb_rapot_nm_siswa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f5135449-3f79-42bd-95b7-e9ecd7a2633d" x="156" y="0" width="100" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tb_rapot_kompetensi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ed7b9893-92b6-487e-a597-cd60af72af43" x="256" y="0" width="43" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tb_rapot_kelas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="304eff43-2534-4b43-92c7-63213a272d71" x="299" y="0" width="50" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tb_rapot_semester}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="bbf3796a-5d00-4fa8-b820-2f6f7a6376b7" x="349" y="0" width="52" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tb_rapot_ta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d1f187e1-9d00-4250-9ee9-7f5120d2a9da" x="401" y="0" width="35" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tb_rapot_rata}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="bc6e3c10-7a5d-4206-99e7-5228ec4fb670" x="436" y="0" width="75" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tb_rapot_ket}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement uuid="5c130e52-d15d-46be-809b-faae7120cfd6" x="479" y="10" width="32" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="110">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="91288632-3e07-4216-9a26-795eb1f123ae" x="412" y="28" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="5ed53e9f-8706-4592-8a72-442dd21c4903" x="376" y="94" width="124" height="14"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[B. Rahmad Sartono, S.Pd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1b5b052e-573f-43c9-95c7-e9ee4a28c75d" x="376" y="28" width="36" height="20"/>
+				<textElement/>
+				<text><![CDATA[Bekasi,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5ed53e9f-8706-4592-8a72-442dd21c4903" x="376" y="48" width="100" height="14"/>
+				<textElement/>
+				<text><![CDATA[Kepala Sekolah]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

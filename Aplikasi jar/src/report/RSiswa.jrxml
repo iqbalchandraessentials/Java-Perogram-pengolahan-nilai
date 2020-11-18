@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="siswa" language="groovy" pageWidth="595" pageHeight="842" columnWidth="511" leftMargin="42" rightMargin="42" topMargin="34" bottomMargin="42" uuid="8f64c9f7-3ecb-4b8d-9424-aa5f54ccabcc">
+	<property name="ireport.zoom" value="1.1000000000000005"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="71"/>
+	<parameter name="Logo" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     tb_siswa.`id_siswa` AS tb_siswa_id_siswa,
+     tb_siswa.`nm_siswa` AS tb_siswa_nm_siswa,
+     tb_siswa.`tmp_lahir` AS tb_siswa_tmp_lahir,
+     tb_siswa.`tgl_lahir` AS tb_siswa_tgl_lahir,
+     tb_siswa.`jenkel` AS tb_siswa_jenkel,
+     tb_siswa.`agama` AS tb_siswa_agama,
+     tb_siswa.`alamat` AS tb_siswa_alamat,
+     tb_siswa.`no_tlp` AS tb_siswa_no_tlp,
+     tb_siswa.`nm_ayah` AS tb_siswa_nm_ayah,
+     tb_siswa.`nm_ibu` AS tb_siswa_nm_ibu,
+     tb_siswa.`pkj_ayah` AS tb_siswa_pkj_ayah,
+     tb_siswa.`pkj_ibu` AS tb_siswa_pkj_ibu,
+     tb_siswa.`jml_saudara` AS tb_siswa_jml_saudara,
+     tb_siswa.`nm_wali` AS tb_siswa_nm_wali,
+     tb_siswa.`asal_sekolah` AS tb_siswa_asal_sekolah,
+     tb_status_siswa.`id_status` AS tb_status_siswa_id_status,
+     tb_status_siswa.`id_siswa` AS tb_status_siswa_id_siswa,
+     tb_status_siswa.`id_kelas` AS tb_status_siswa_id_kelas,
+     tb_status_siswa.`id_kompetensi` AS tb_status_siswa_id_kompetensi
+FROM
+     `tb_siswa` tb_siswa,
+     `tb_status_siswa` tb_status_siswa 
+WHERE 
+tb_siswa.id_siswa = tb_status_siswa.id_siswa]]>
+	</queryString>
+	<field name="tb_siswa_id_siswa" class="java.lang.String"/>
+	<field name="tb_siswa_nm_siswa" class="java.lang.String"/>
+	<field name="tb_siswa_tmp_lahir" class="java.lang.String"/>
+	<field name="tb_siswa_tgl_lahir" class="java.lang.String"/>
+	<field name="tb_siswa_jenkel" class="java.lang.String"/>
+	<field name="tb_siswa_agama" class="java.lang.String"/>
+	<field name="tb_siswa_alamat" class="java.lang.String"/>
+	<field name="tb_siswa_no_tlp" class="java.lang.String"/>
+	<field name="tb_siswa_nm_ayah" class="java.lang.String"/>
+	<field name="tb_siswa_nm_ibu" class="java.lang.String"/>
+	<field name="tb_siswa_pkj_ayah" class="java.lang.String"/>
+	<field name="tb_siswa_pkj_ibu" class="java.lang.String"/>
+	<field name="tb_siswa_jml_saudara" class="java.lang.Integer"/>
+	<field name="tb_siswa_nm_wali" class="java.lang.String"/>
+	<field name="tb_siswa_asal_sekolah" class="java.lang.String"/>
+	<field name="tb_status_siswa_id_status" class="java.lang.String"/>
+	<field name="tb_status_siswa_id_siswa" class="java.lang.String"/>
+	<field name="tb_status_siswa_id_kelas" class="java.lang.String"/>
+	<field name="tb_status_siswa_id_kompetensi" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="145" splitType="Stretch">
+			<image>
+				<reportElement uuid="2b068959-17dd-4f3b-8cc9-933071419742" x="-42" y="2" width="594" height="140"/>
+				<imageExpression><![CDATA[$P{Logo}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="8bdb7167-adbd-410d-819f-bdcf728c3a78" x="188" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATA SISWA]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="01ba6453-b343-459d-9bcb-0ef07f61ffb1" x="1" y="0" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[id siswa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="661bcda2-047f-4f76-a26b-776469bd0376" x="49" y="0" width="100" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="52bef994-0cbe-4e8a-b2f0-dcb2e8a022b1" x="227" y="0" width="73" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jenis kelamin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ae7c7462-5227-4038-8928-abf6163f1cb1" x="300" y="0" width="136" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="80b055e8-c66a-48a4-9df7-22734a7c8923" x="436" y="0" width="75" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. Telp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2677ddec-0239-4c85-bd28-ec83229f03f2" x="149" y="0" width="39" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kelas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2677ddec-0239-4c85-bd28-ec83229f03f2" x="188" y="0" width="39" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kejur]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="1804ecd8-3130-4ee9-a4df-ae6bf0bc6760" x="1" y="0" width="48" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_siswa_id_siswa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="172f0bcb-c44a-470e-8cd2-fba201d16d21" x="49" y="0" width="100" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_siswa_nm_siswa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="72f1e7ec-2e88-4936-be13-c5c160b2299e" x="227" y="0" width="73" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_siswa_jenkel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="acab4ea2-f774-4d11-9c21-527ad1cc50b8" x="300" y="0" width="136" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_siswa_alamat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="07d2e2a3-e8fe-4bd3-86d7-54c801f37542" x="436" y="0" width="75" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_siswa_no_tlp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="58fb7d91-e281-4cf2-b3d5-9eea56039a62" x="149" y="0" width="39" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_status_siswa_id_kelas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="163eb0af-4845-42e0-872f-694c8e83bbc5" x="188" y="0" width="39" height="20"/>
+				<box leftPadding="4" rightPadding="4">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tb_status_siswa_id_kompetensi}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement uuid="8a7c6e78-0a47-4f8c-bcbb-50635b17bcc6" x="485" y="10" width="26" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="126">
+			<staticText>
+				<reportElement uuid="5ed53e9f-8706-4592-8a72-442dd21c4903" x="375" y="108" width="124" height="14"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[B. Rahmad Sartono, S.Pd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1b5b052e-573f-43c9-95c7-e9ee4a28c75d" x="375" y="28" width="36" height="20"/>
+				<textElement/>
+				<text><![CDATA[Bekasi,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5ed53e9f-8706-4592-8a72-442dd21c4903" x="375" y="48" width="100" height="14"/>
+				<textElement/>
+				<text><![CDATA[Mengetahui]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5ed53e9f-8706-4592-8a72-442dd21c4903" x="375" y="62" width="100" height="14"/>
+				<textElement/>
+				<text><![CDATA[Kepala Sekolah]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="91288632-3e07-4216-9a26-795eb1f123ae" x="411" y="28" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
